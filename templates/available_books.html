@@ -1,0 +1,32 @@
+<!-- templates/available_books.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>G8 Bookstore</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>G8 Bookstore</h1>
+        <h2>Available Books</h2>
+    </div>
+    <div class="main-content">
+        <div class="book-container">
+            <div class="book-list">
+                <form action="/checkout" method="post">
+                    {% for book in books %}
+                        <div class="book-item">
+                            <img src="{{ book.image }}" alt="{{ book.title }}" class="book-image">
+                            <div class="book-details">
+                                <label>{{ book.title }} - {{ book.author }} (RM {{ book.price }})</label>
+                                <input type="checkbox" name="selected_books" value="{{ book.id }}">
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <input type="submit" value="Proceed to Checkout">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* static/styles.css */
+
+.book-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.book-image {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-options {
+    margin-top: 20px;
+}
+
+.payment-method {
+    margin-bottom: 10px;
+}
+
+.payment-options {
+    margin-top: 20px;
+}
+
+.payment-icon {
+    max-width: 65px; /* Adjust image size */
+    vertical-align: middle;
+    margin-right: 10px; /* Provide spacing between image and text */
+}
+
+.payment-icon1 {
+    max-width: 60px; /* Adjust image size */
+    vertical-align: middle;
+    margin-right: 10px; /* Provide spacing between image and text */
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-container {
+    flex-grow: 1;
+}
+
+.proceed-button {
+    margin-top: 20px; /* Adjust spacing from the book list */
+    text-align: right;
+}
+
+.proceed-button form {
+    background-color: #3498db;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.proceed-button form:hover {
+    background-color: #2980b9;
+}
+
+.selected-books,
+.total-price,
+.payment-options {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-options label {
+    display: flex;
+}
+
+.selected-books ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.selected-books ul li {
+    margin-bottom: 5px;
+}
+
+.payment-options input[type="radio"] {
+    margin-right: 10px;
+}
+
+.payment-options label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.main-content {
+    display: flex;
+}
+
+.left-section {
+    margin-right: 20px;
+}
+
+.payment-options label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 3px 20px;
+    background-color: #308cc9;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}

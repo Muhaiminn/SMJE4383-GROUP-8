@@ -1,0 +1,48 @@
+<!-- templates/checkout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout - G8 Bookstore</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>G8 Bookstore</h1>
+        <h2>Checkout</h2>
+    </div>
+    <div class="main-content">
+        <div class="left-section">
+            <div class="selected-books">
+                <h3>Selected Books:</h3>
+                <ul>
+                    {% for book in selected_books %}
+                    <li>{{ book.title }} - {{ book.author }} (RM {{ book.price }})</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="total-price">
+                <h3>Total Price:</h3>
+                <p>RM {{ total_price }}</p>
+            </div>
+            <div class="payment-options">
+                <h3>Select Payment Option:</h3>
+                <!-- Payment options go here -->
+                <form action="/payment" method="post">
+                    <label for="touch_n_go">
+                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRoiQUwxZIBfryzmrz8ceH158ZDn3GuotAwDP7UPTlB7-td_syI8bCk9lfzAvI3lTl74bA2_6PjZH38Q8Q4WWasuS8P894h&usqp=CAE.png" alt="Touch 'n Go" class="payment-icon">
+                        <input type="radio" id="touch_n_go" name="payment_option" value="touch_n_go">
+                        Pay with Touch 'n Go
+                    </label><br>
+                    <label for="debit_card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj9wDH88nzd3MuVuQd0Jb_9KtyFDOsymXI5A&usqp=CAU.png" alt="Debit Card" class="payment-icon1">
+                        <input type="radio" id="debit_card" name="payment_option" value="debit_card">
+                        Pay with Debit Card
+                    </label><br>
+                    <a href="{{ url_for('index') }}"><button type="button">Back</button></a>
+                    <input type="submit" value="Proceed to Payment">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
