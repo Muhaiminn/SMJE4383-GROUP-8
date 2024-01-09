@@ -126,6 +126,10 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2 {
+    font-style: oblique;
+}
+
 ul {
     list-style: none;
     padding: 0;
