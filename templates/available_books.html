@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>G8 Bookstore</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='list.css') }}">
 </head>
 <body>
     <div class="header">
@@ -16,22 +16,21 @@
         <input type="submit" value="Search">
     </form>
     <div class="main-content">
-        <div class="book-container">
+        <!-- Book list -->
+        <form action="/checkout" method="post" class="book-form">
             <div class="book-list">
-                <form action="/checkout" method="post">
-                    {% for book in books %}
-                        <div class="book-item">
-                            <img src="{{ book.image }}" alt="{{ book.title }}" class="book-image">
-                            <div class="book-details">
-                                <label>{{ book.title }} - {{ book.author }} (RM {{ book.price }})</label>
-                                <input type="checkbox" name="selected_books" value="{{ book.id }}">
-                            </div>
-                        </div>
-                    {% endfor %}
-                    <input type="submit" value="Proceed to Checkout">
-                </form>
+                {% for book in books %}
+                <div class="book-item">
+                    <img src="{{ book.image }}" alt="{{ book.title }}" class="book-image">
+                    <div class="book-details">
+                        <label>{{ book.title }} - {{ book.author }} (RM {{ book.price }})</label>
+                        <input type="checkbox" name="selected_books" value="{{ book.id }}">
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-        </div>
+            <input type="submit" value="Proceed to Checkout">
+        </form>
     </div>
     <form method="post" action="/logout">
         <input type="submit" value="Logout">

@@ -21,3 +21,24 @@ form {
     text-align: center;
     margin-top: 20px;
 }
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.logo {
+    max-width: 250px; /* Adjust image size */
+    margin-right: 10px; /* Optional margin */
+}
+input[type="submit"] {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

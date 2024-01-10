@@ -55,13 +55,13 @@
 .payment-icon {
     max-width: 65px; /* Adjust image size */
     vertical-align: middle;
-    margin-right: 5px; /* Provide spacing between image and text */
+    margin-right: 10px; /* Provide spacing between image and text */
 }
 
 .payment-icon1 {
     max-width: 60px; /* Adjust image size */
     vertical-align: middle;
-    margin-right: 5px; /* Provide spacing between image and text */
+    margin-right: 10px; /* Provide spacing between image and text */
 }
 
 .main-content {
@@ -130,7 +130,7 @@
 
 .payment-options label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 input[type="text"] {
@@ -151,6 +151,11 @@ input[type="submit"]:hover {
 h1 {
     text-align: center;
     margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 ul {
