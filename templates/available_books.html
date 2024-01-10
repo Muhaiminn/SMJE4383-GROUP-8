@@ -10,6 +10,11 @@
         <h1>G8 Bookstore</h1>
         <h2>Available Books</h2>
     </div>
+    <form method="get" action="/search">
+        <label for="search_query">Search:</label>
+        <input type="text" id="search_query" name="query" placeholder="Enter book title or author">
+        <input type="submit" value="Search">
+    </form>
     <div class="main-content">
         <div class="book-container">
             <div class="book-list">
@@ -28,5 +33,8 @@
             </div>
         </div>
     </div>
+    <form method="post" action="/logout">
+        <input type="submit" value="Logout">
+    </form>
 </body>
 </html>
