@@ -58,6 +58,10 @@ books = [
     # Add more books as needed
 ]
 
+@app.route('/')
+def index():
+    return redirect(url_for('login'))
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -72,7 +76,7 @@ def login():
 
             if user and bcrypt.check_password_hash(user[1], password):
                 # Login successful
-                return redirect(url_for('index'))
+                return redirect(url_for('book'))
             else:
                 # Invalid credentials
                 return "Invalid credentials"
@@ -112,8 +116,8 @@ def search():
     search_results = [book for book in books if (query.lower() in book['title'].lower() or query.lower() in book['author'].lower()) and book.get('availability', True)]
     return render_template('available_books.html', books=search_results)
 
-@app.route('/')
-def index():
+@app.route('/book')
+def book():
     return render_template('available_books.html', books=books)
 
 @app.route('/checkout', methods=['POST'])
@@ -136,5 +140,5 @@ def payment():
 
 if __name__ == '__main__':
     create_table()
-    app.run(debug=True, port=5000)
+    app.run(debug=True)
 
