@@ -1,11 +1,29 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, g
 from flask_bcrypt import Bcrypt
 import sqlite3
 
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
-
 DATABASE = 'users.db'
+
+def connect_db():
+    """Connect to the SQLite database."""
+    db_path = '/home/muhaimin01/users.db'
+    connection = sqlite3.connect(db_path)
+    connection.row_factory = sqlite3.Row
+    return connection
+
+def get_db():
+    """Get the SQLite database connection."""
+    if 'db' not in g:
+        g.db = connect_db()
+    return g.db
+
+@app.teardown_appcontext
+def close_db(error):
+    """Close the SQLite database connection at the end of the request."""
+    if hasattr(g, 'db'):
+        g.db.close()
 
 def create_table():
     with sqlite3.connect(DATABASE) as connection:
