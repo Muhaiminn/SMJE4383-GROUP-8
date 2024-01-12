@@ -1,0 +1,135 @@
+/* static/list.css */
+
+body, form, div {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    background-color: #dedede;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(205, 255, 255);
+}
+
+.book-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.book-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-item {
+    border: 1px solid #090909;
+    padding: 10px;
+    margin: 10px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    display: flex;
+}
+
+/* For smaller screens, adjust the width for two items in a row */
+@media (max-width: 768px) {
+    .book-item {
+        width: calc(25% - 5px); /* Adjust width for two items in a row */
+    }
+}
+
+.book-image {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.book-container {
+    flex-grow: 1;
+}
+
+.selected-books ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.selected-books ul li {
+    margin-bottom: 5px;
+}
+
+.logout {
+    position: absolute;
+    top: 136px;
+    right: 10px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 200px;
+}
+input[type="submit"] {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #090909;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #308cc9;
+    color: rgb(255, 255, 255);
+    border: 1px solid #090909;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}

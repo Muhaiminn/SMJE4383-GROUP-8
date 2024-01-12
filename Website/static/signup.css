@@ -39,6 +39,20 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
 }
+
 input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form {
+    border: 2px solid #090909;
+    padding: 10px;
+    text-align: center;
+    margin: 20px auto; /* Center horizontally with auto margins */
+    max-width: 250px; /* Optionally set a maximum width for the form */
 }

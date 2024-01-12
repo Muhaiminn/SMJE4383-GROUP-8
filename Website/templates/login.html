@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <div class="logo-container">
-        <img src="https://pembina.com.my/wp-content/uploads/2016/01/logo-pembina-utm.png" alt="Logo" class="logo">
-    </div>
     <title>Login - G8 Bookstore</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
 </head>
 <body>
+    <div class="logo-container">
+        <img src="https://pembina.com.my/wp-content/uploads/2016/01/logo-pembina-utm.png" alt="Logo" class="logo">
+    </div>
+    <div class="form">
     <h1>G8 Bookstore</h1>
-    <h2>Login</h2>
+    <h2>-Login-</h2>
     <form method="post" action="/login">
         <label for="id">ID:</label><br>
         <input type="text" id="id" name="id"><br>
@@ -17,5 +18,7 @@
         <input type="password" id="password" name="password"><br><br>
         <input type="submit" value="Login">
     </form>
+    <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+    </div>
 </body>
 </html>

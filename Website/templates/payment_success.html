@@ -1,0 +1,23 @@
+<!-- templates/payment_success.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Successful - G8 Bookstore</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>G8 Bookstore</h1>
+        <h2>Payment Successful!</h2>
+    </div>
+    <form method="post" action="/logout" class="logout">
+        <button type="submit">Logout</button>
+    </form>
+    <div class="main-content1">
+        <p>Your payment was successful. Thank you for shopping with us!</p>
+    </div>
+    <div class="main-content2">
+        <a href="{{ url_for('index') }}"><button type="button">Back to home</button></a>
+    </div>
+</body>
+</html>

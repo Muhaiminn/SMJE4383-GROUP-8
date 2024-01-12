@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up - G8 Bookstore</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="https://pembina.com.my/wp-content/uploads/2016/01/logo-pembina-utm.png" alt="Logo" class="logo">
+    </div>
+    <div class="form">
+    <h1>G8 Bookstore</h1>
+    <h2>-Sign Up-</h2>
+    <form method="post" action="/signup">
+        <label for="new_id">ID:</label><br>
+        <input type="text" id="new_id" name="new_id" required><br>
+        <label for="new_password">Password:</label><br>
+        <input type="password" id="new_password" name="new_password" required><br><br>
+        <input type="submit" value="Sign Up">
+    </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+</body>
+</html>

@@ -10,6 +10,9 @@
         <h1>G8 Bookstore</h1>
         <h2>Available Books</h2>
     </div>
+    <form method="post" action="/logout" class="logout">
+        <button type="submit">Logout</button>
+    </form>
     <form method="get" action="/search">
         <label for="search_query">Search:</label>
         <input type="text" id="search_query" name="query" placeholder="Enter book title or author">
@@ -23,7 +26,7 @@
                 <div class="book-item">
                     <img src="{{ book.image }}" alt="{{ book.title }}" class="book-image">
                     <div class="book-details">
-                        <label>{{ book.title }} - {{ book.author }} (RM {{ book.price }})</label>
+                        <label>{{ book.title }} - {{ book.author }} - {{ book.genre }} (RM {{ book.price }})</label>
                         <input type="checkbox" name="selected_books" value="{{ book.id }}">
                     </div>
                 </div>
@@ -32,8 +35,5 @@
             <input type="submit" value="Proceed to Checkout">
         </form>
     </div>
-    <form method="post" action="/logout">
-        <input type="submit" value="Logout">
-    </form>
 </body>
 </html>
