@@ -19,18 +19,18 @@
                 <h3>Selected Books:</h3>
                 <ul>
                     {% for book in selected_books %}
-                    <li>{{ book.title }} - {{ book.author }} - {{ book.genre }} (RM {{ book.price }})</li>
+                    <li>{{ book.title }} - {{ book.author }} - {{ book.genre }} (RM {{ '{:.2f}'.format(book.price) }})</li>
                     {% endfor %}
                 </ul>
             </div>
             <div class="total-price">
                 <h3>Total Price:</h3>
-                <p>RM {{ total_price }}</p>
+                <p>RM {{ '{:.2f}'.format(total_price) }}</p>
             </div>
             <div class="payment-options">
                 <h3>Select Payment Option:</h3>
                 <!-- Payment options go here -->
-                <form action="/payment" method="post">
+                <form action="/payment" method="post" class="butang">
                     <label for="touch_n_go">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDdGssk-X-bSwDzV9-p0C-V3lOMhucHXtuk84hyQQ6Y8n-DHTviKg7LbB6Kq5fNCGFnZ8&usqp=CAU.png" alt="Touch 'n Go" class="payment-icon">
                         <input type="radio" id="touch_n_go" name="payment_option" value="touch_n_go">

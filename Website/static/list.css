@@ -59,7 +59,8 @@ body, form, div {
 .book-details {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    text-align: left;
+    margin-left: 5px;
 }
 
 .book-container {
@@ -98,6 +99,12 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+input[type="checkbox"] {
+    text-align: left;
+    height: 20px;
+    width: 20px;
+}
+
 h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -106,6 +113,14 @@ h1 {
 h2 {
     text-align: center;
     margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1px;
 }
 
 ul {

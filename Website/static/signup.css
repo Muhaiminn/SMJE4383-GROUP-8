@@ -26,12 +26,16 @@ form {
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
+    padding: 10px;
+    background: #dedede;
 }
 
 .logo {
     max-width: 250px; /* Adjust image size */
     margin-right: 10px; /* Optional margin */
+    background-color: #dedede;
 }
+
 input[type="submit"] {
     padding: 8px 12px;
     background-color: #007bff;

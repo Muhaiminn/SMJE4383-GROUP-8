@@ -26,7 +26,10 @@
                 <div class="book-item">
                     <img src="{{ book.image }}" alt="{{ book.title }}" class="book-image">
                     <div class="book-details">
-                        <label>{{ book.title }} - {{ book.author }} - {{ book.genre }} (RM {{ book.price }})</label>
+                        <h3>{{ book.title}}</h3>
+                        <p>Author: {{ book.author }}</p>
+                        <p>Genre: {{ book.genre }}</p>
+                        <p>Price: RM {{ '{:.2f}'.format(book.price) }}</p>
                         <input type="checkbox" name="selected_books" value="{{ book.id }}">
                     </div>
                 </div>

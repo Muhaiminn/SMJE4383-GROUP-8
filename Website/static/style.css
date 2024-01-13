@@ -17,6 +17,11 @@ body, form, div {
     right: 10px;
 }
 
+.butang {
+    align-items: flex-start; /* Align to the left */
+    text-align: left; /* Align text to the left */
+}
+
 .left-section {
     display: flex;
     flex-direction: column;
@@ -25,12 +30,19 @@ body, form, div {
     margin-left: 10px;
 }
 
-.selected-books,
 .total-price,
 .payment-options {
     width: 100%;
     max-width: 400px; /* Adjust the maximum width of the sections */
-    margin-bottom: 20px; /* Add spacing between sections */
+    margin-bottom: 10px; /* Add spacing between sections */
+}
+
+.selected-books {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px; /* Adjust the maximum width of the sections */
+    margin-bottom: 10px; /* Add spacing between sections */
 }
 
 .payment-options label {
